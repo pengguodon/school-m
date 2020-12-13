@@ -1,0 +1,15 @@
+.empSecurity > .empSecurity-title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+    background-color: #fff; 
+}
+
+.empSecurity .am-list-item .am-list-line .am-list-content{
+    text-indent:1.5rem;
+    font-size: 0.7rem;
+    color:#333;
+}

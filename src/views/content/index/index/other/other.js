@@ -10,9 +10,14 @@ import {
 
 import loadable from 'utils/loadable'
 
+import BackTop from './component/backTop/backTop'
+import Bottom from './component/bottom/bottom'
+
 const StIntro = loadable(()=> import('./component/stIntro/stIntro'))
 const MjSetup = loadable(()=> import('./component/mjSetup/mjSetup'))
 const ApplyGuide = loadable(()=> import('./component/applyGuide/applyGuide'))
+const AcAttachments = loadable(()=> import('./component/tcAttachments/tcAttachments'))
+const EmpSecurity = loadable(()=> import('./component/empSecurity/empSecurity'))
 
 class Other extends React.Component{
   render(){
@@ -29,17 +34,19 @@ class Other extends React.Component{
           <div>校园文化</div>
         </Route>
         <Route path="/index/other/tcAttachments">
-          <div>教学设备</div>
+          <AcAttachments/>
         </Route>
         <Route path="/index/other/dgAscension">
           <div>双文凭教育</div>
         </Route>
         <Route path="/index/other/empSecurity">
-          <div>就业保障</div>
+          <EmpSecurity/>
         </Route>
         <Route path="/index/other/applyGuide">
           <ApplyGuide/>
         </Route>
+        <BackTop/>
+        <Bottom/>
       </div>
     )
   }

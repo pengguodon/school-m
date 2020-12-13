@@ -9,13 +9,13 @@
 }
 
 .stIntro .am-list-item {
-    background-color: rgb(130, 77, 253);
+    background-color: #E6E6E6;
 }
 
 .stIntro .am-list-item .am-list-line .am-list-content {
     text-indent:1.5rem;
     font-size: 0.7rem;
-    color:#eee;
+    color: balck;
 }
 .stIntro .am-list-item .am-list-line .am-list-content >span{
     color: red;

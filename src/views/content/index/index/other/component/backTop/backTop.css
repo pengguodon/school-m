@@ -1,0 +1,15 @@
+.other-backTop{
+  position: absolute;
+  right: 50px;
+  bottom: 100px;
+  z-index: 999999;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(18, 150, 219, 0.8);
+  line-height: 50px;
+  font-size: .7rem;
+  text-align: center;
+  color: #fff;
+}
