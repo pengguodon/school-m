@@ -1,0 +1,23 @@
+.noneCourse .spe {
+  width: 200px;
+  height: 115px;
+  text-align: center;
+}
+
+.noneCourse .am-result-pic{
+  width: 200px;
+  height: 115px;
+}
+
+.noneCourse .sub-title {
+  color: #888;
+  font-size: 14px;
+  padding: 20px 0 18px 0;
+  margin-left: 15px;
+}
+
+.noneCourse .title{
+  color: #888;
+  font-size: 1rem;
+  padding: 10px 0;
+}

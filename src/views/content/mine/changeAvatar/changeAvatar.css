@@ -1,0 +1,40 @@
+.changeAvatar .imgW{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: beige;
+}
+
+.changeAvatar .changeAvatar-current{
+    height: 150px;
+    text-align: center;
+}
+
+.changeAvatar .changeAvatar-current .title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.7rem;
+}
+
+.changeAvatar .changeAvatar-current .avatar img{
+    border-radius: 50%;
+    background-color: #FFE070;
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+}
+
+.changeAvatar .changeAvatar-current .avatar{
+    margin-top: 5px;
+}
+
+.changeAvatar .changeAvatar-btn{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+

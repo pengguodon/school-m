@@ -1,0 +1,23 @@
+.stIntro > div.stIntro-title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align:center;
+    color: #000;
+    background-color: #fff;
+}
+
+.stIntro .am-list-item {
+    background-color: rgb(130, 77, 253);
+}
+
+.stIntro .am-list-item .am-list-line .am-list-content {
+    text-indent:1.5rem;
+    font-size: 0.7rem;
+    color:#eee;
+}
+.stIntro .am-list-item .am-list-line .am-list-content >span{
+    color: red;
+}
+

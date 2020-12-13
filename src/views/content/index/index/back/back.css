@@ -1,0 +1,29 @@
+@keyframes backTF
+{
+  from {
+    transform: scale(1 , 1);
+  }
+  to {
+    transform: scale(1.05, 1.05);
+  }
+}
+
+.back{
+  position: fixed;
+  z-index: 99999;
+  right: 25px;
+  bottom: 25px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 30%;
+  color: #fff;
+  font-size: .7rem;
+  background-color: #33A3F4;
+  animation: backTF 3s infinite;
+  animation-direction:alternate;
+  animation-timing-function: linear;
+  box-shadow: 1px 1px 15px 0px #808080;
+}
+

@@ -1,0 +1,48 @@
+.funcNav{
+  height: 200px;
+  width: 100%;
+  background-color: #F6F6F6;
+}
+
+.funcNav .funcNav-content{
+  width: 100%;
+  height: 200px;
+}
+
+.funcNav .funcNav-content .funcNav-content-list{
+  height: 180px;
+  width: 100%;
+}
+
+.funcNav .funcNav-content .funcNav-content-list > div{
+  float: left;
+  width: 25%;
+  height: 50%;
+  padding: 20px 5px;
+  box-sizing: border-box;
+}
+
+.funcNav .funcNav-content .funcNav-content-list > div img{
+  width: 50px;
+  display: block;
+  margin: auto;
+  height: 50px;
+}
+
+.funcNav .funcNav-content .funcNav-content-list > div span{
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 0.6rem;
+  color: #666666;
+  font-weight: 800;
+}
+
+.funcNav .am-carousel{
+  height: 200px !important;
+}
+
+.funcNav  .slider-frame{
+  height: 200px !important;
+}

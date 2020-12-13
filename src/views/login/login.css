@@ -1,0 +1,31 @@
+.login{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.login .login-logo{
+  height: 10rem;
+  width: 100%;
+  position: relative;
+}
+.login .login-input{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.login .login-logo img{
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2.5rem;
+  margin-top: -2.5rem;
+}
+
+.login .login-submit{
+  margin: auto;
+  margin-top: 3rem;
+  width: 70%;
+}

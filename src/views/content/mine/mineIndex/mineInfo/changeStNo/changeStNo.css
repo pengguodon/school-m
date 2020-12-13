@@ -1,0 +1,14 @@
+.changeStNo{
+  color: #7A81DE;
+  font-size: 15px;
+  margin-left: 10px;
+  font-size: 800;
+}
+
+.inputNo{
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px dashed #00A2E8;
+  padding-left: 10px;
+}

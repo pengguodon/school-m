@@ -1,0 +1,8 @@
+.mineIndex .mineIndex-nav-list .am-list-thumb:first-child{
+    margin: -3px 7px 0 0px;
+}
+
+.mineIndex .mineIndex-nav-list .am-list-thumb img{
+    width: 20px;
+    height: 20px;
+}

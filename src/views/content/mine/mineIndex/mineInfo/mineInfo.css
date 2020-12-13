@@ -1,0 +1,62 @@
+.mineInfo{
+  height: 265px;
+  width: 100%;
+}
+
+.mineInfo .mineInfo-bg{
+  height: 200px;
+  width: 100%;
+  background: url("https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/bg.jpg") no-repeat ;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.mineInfo .mineInfo-wrap{
+  height: 150px;
+  background-color: #fff;
+  position: relative;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info{
+  position: absolute;
+  top: -50%;
+  height: 100px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info{
+  height: 150px;
+  display: flex;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info > div.mineInfo-info-avatar{
+  width: 120px;
+  text-align: center;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info > div.mineInfo-info-avatar img{
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #FFE070;
+  box-shadow: 0px 0px 10px 1px #796fb5;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info > .mineInfo-info-desc{
+  flex: 1;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info > .mineInfo-info-desc .mineInfo-info-desc-username{
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+}
+
+.mineInfo .mineInfo-wrap .mineInfo-info > .mineInfo-info-desc .mineInfo-info-desc-className{
+  padding: 10px;
+  font-size: 0.8rem;
+  
+}

@@ -1,0 +1,38 @@
+.header{
+  height: 250px;
+  position: relative;
+}
+
+
+.header .header-bg{
+  position: absolute;
+  left: -25%;
+  height: 140px;
+  width: 150%;
+  background-image: linear-gradient(134deg,#33A3F4,#33A3F4 69%);
+  /* background-image: linear-gradient(134deg,#33A3F4,#ED1C24 69%); */
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.header .header-title{
+  color: black;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+  height: 35px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  background-color: #fff;
+  font-size: .7rem;
+  letter-spacing: 5px;
+}
+
+.header .header-swipper{
+  position: absolute;
+  top: 50px;
+  height: 150px;
+  width: 100%;
+  margin: auto;
+}

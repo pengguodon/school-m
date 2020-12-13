@@ -1,0 +1,22 @@
+.activity{
+  height: 100%;
+  background-color: #F5F5F9;
+}
+
+.activity .spe {
+  width: 60px;
+  height: 60px;
+}
+.activity .sub-title {
+  color: #888;
+  font-size: 14px;
+  padding: 30px 0 18px 0;
+  margin-left: 15px;
+}
+/* 
+.activity .am-list-view-scrollview-content{
+  height: 100%;
+}
+.activity .am-pull-to-refresh-content-wrapper{
+  height: 100%;
+} */

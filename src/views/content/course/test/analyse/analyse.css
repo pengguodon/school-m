@@ -1,0 +1,13 @@
+.analyse{
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.analyse .alTitle{
+  height: 2rem;
+  background-color: #eee;
+  line-height: 2rem;
+  padding-left: 1rem;
+  font-size: .8rem;
+  letter-spacing: .3rem;
+}

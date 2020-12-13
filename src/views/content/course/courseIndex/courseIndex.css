@@ -1,0 +1,8 @@
+.courseIndex{
+  height: 100%;
+}
+
+.courseIndex .courseIndexWrap{
+  padding-top: 50px;
+  height: calc(100% - 95px);
+}

@@ -1,0 +1,7 @@
+.aboutMe{
+  height: 100%;
+  background-color: #F0F0F0;
+}
+.aboutMe .aboutMeImgWrap{
+  height: calc(100% - 50px);
+}

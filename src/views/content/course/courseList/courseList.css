@@ -1,0 +1,14 @@
+.courseList{
+  height: calc(100%);
+  background-color: #F5F5F9;
+}
+
+
+/* 有bug ----------------------- */
+/* .courseList .am-list-view-scrollview-content{
+  height: 100%;
+}
+.courseList .am-pull-to-refresh-content-wrapper{
+  height: 100%;
+} */
+/* 有bug ----------------------- */

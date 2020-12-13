@@ -1,0 +1,23 @@
+.member{
+  height: 100%;
+}
+
+.member .am-list-view-scrollview-content{
+  height: 100%;
+}
+.member .am-pull-to-refresh-content-wrapper{
+  height: 100%;
+}
+
+.member .title{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+}
+
+.member .memberList{
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+}

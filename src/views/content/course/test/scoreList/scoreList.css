@@ -1,0 +1,99 @@
+.scoreList{
+  height: 100%;
+}
+.scoreList .topInfo{
+  height: 10rem;
+  line-height: 2rem;
+  background-color: #00BADC;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.scoreList .list{
+  height: calc(100% - 10rem);
+}
+
+
+.scoreList .ranking {
+  height: 1rem;
+}
+.scoreList .ranking span{
+  text-align: center;
+  width: 25%;
+  float: left;
+  /* background-color: red; */
+}
+
+/* .scoreList .am-list-view-scrollview-content{
+  height: 100%;
+}
+.scoreList .am-pull-to-refresh-content-wrapper{
+  height: 100%;
+} */
+
+html,
+body,
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.topInfo {
+    width: 100%;
+    /* height: 300px; */
+    margin: 0 auto;
+    /* background-color: rgb(22, 174, 212); */
+    background-image: linear-gradient(235deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    color: rgb(255, 255, 255);
+}
+
+.topInfo .content_top {
+    display: flex;
+    height: 35px;
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+}
+
+.topInfo .top_center {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+}
+
+.topInfo .top_right {
+    flex: 1;
+    text-align: right;
+}
+
+.topInfo .message {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.topInfo .message .ranking {
+    font-size: 14px;
+    line-height: 70px;
+    padding-right: 10px;
+}
+
+.topInfo .message .score {
+    font-size: 50px;
+}
+
+.topInfo .student_score {
+    display: flex;
+    justify-content: center;
+    font-size: .7rem;
+    margin-top: 1rem;
+}
+
+.topInfo .result {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+}

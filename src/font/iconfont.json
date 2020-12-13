@@ -1,0 +1,135 @@
+{
+  "id": "2183679",
+  "name": "school",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2194098",
+      "name": "课程",
+      "font_class": "lesson",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "2468822",
+      "name": "活动 (1)",
+      "font_class": "huodong1",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "10981238",
+      "name": "成员",
+      "font_class": "chengyuan",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "13278962",
+      "name": "信息",
+      "font_class": "jibenxinxi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4224627",
+      "name": "金牌",
+      "font_class": "jinpai1",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "4528366",
+      "name": "铜牌",
+      "font_class": "tongpai1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "6373067",
+      "name": "银牌",
+      "font_class": "yinpai1",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "2328475",
+      "name": "金牌",
+      "font_class": "jinpai",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "9430244",
+      "name": "银牌",
+      "font_class": "yinpai",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "14051635",
+      "name": "铜牌",
+      "font_class": "tongpai",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "14658638",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "14055543",
+      "name": "课程",
+      "font_class": "kecheng",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "9974430",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e708",
+      "unicode_decimal": 59144
+    },
+    {
+      "icon_id": "9626947",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e87f",
+      "unicode_decimal": 59519
+    },
+    {
+      "icon_id": "6501296",
+      "name": "添加",
+      "font_class": "icon--tianjia",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "3729203",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "5065462",
+      "name": "成员",
+      "font_class": "shuangsechangyongtubiao-",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "14626413",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    }
+  ]
+}
