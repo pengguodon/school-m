@@ -23,6 +23,7 @@ import loadable from 'utils/loadable'
 const Login = loadable(() => import('views/login/login'))
 const Content = loadable(() => import('views/content/content'))
 
+
 // redux开发插件
 const store = createStore(My_redux, compose(
   applyMiddleware(thunk),

@@ -1,0 +1,14 @@
+.cpCulture > .cpCulture-title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+    background-color: #fff; 
+}
+.cpCulture .am-list-item .am-list-line .am-list-content{
+    text-indent:1.2rem;
+    font-size: 0.6rem;
+    color:#333;
+}

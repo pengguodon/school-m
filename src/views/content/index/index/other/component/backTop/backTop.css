@@ -1,15 +1,32 @@
 .other-backTop{
   position: absolute;
-  right: 50px;
-  bottom: 100px;
+  width: 40px;
+  height: 40px;
+  right: 30px;
+  bottom: 80px;
   z-index: 999999;
   display: inline-block;
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
-  background-color: rgba(18, 150, 219, 0.8);
-  line-height: 50px;
-  font-size: .7rem;
+  background-color: #8C8C8C;
   text-align: center;
-  color: #fff;
+  opacity: 1;
 }
+
+.other-backTop-none{
+  position: absolute;
+  right: 30px;
+  bottom: 80px;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.other-backTop .other-backTop-bg{
+  margin-top: 6px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background:  url("https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/img/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8.png") 100%/100% no-repeat;
+}
+

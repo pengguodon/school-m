@@ -18,6 +18,8 @@ const MjSetup = loadable(()=> import('./component/mjSetup/mjSetup'))
 const ApplyGuide = loadable(()=> import('./component/applyGuide/applyGuide'))
 const AcAttachments = loadable(()=> import('./component/tcAttachments/tcAttachments'))
 const EmpSecurity = loadable(()=> import('./component/empSecurity/empSecurity'))
+const CpCulture = loadable(()=> import('./component/cpCulture/cpCulture'))
+const DgAscension = loadable(()=> import('./component/dgAscension/dgAscension'))
 
 class Other extends React.Component{
   render(){
@@ -31,13 +33,13 @@ class Other extends React.Component{
           <MjSetup/>
         </Route>
         <Route path="/index/other/cpCulture">
-          <div>校园文化</div>
+          <CpCulture/>
         </Route>
         <Route path="/index/other/tcAttachments">
           <AcAttachments/>
         </Route>
         <Route path="/index/other/dgAscension">
-          <div>双文凭教育</div>
+          <DgAscension/>
         </Route>
         <Route path="/index/other/empSecurity">
           <EmpSecurity/>

@@ -12,7 +12,7 @@ const Other = loadable(()=> import('./index/other/other'))
 class IndexCP extends React.Component {
   render() {
     return (
-      <div className="indexWrap" style={{height:"100%", overflowY: "scroll"}}>
+      <div className="indexWrap" style={{height:"100%", overflowY: "scroll" , overflowX: "hidden"}}>
         <Route exact path="/index">
           <Index />
         </Route>
