@@ -32,7 +32,11 @@ class Content extends React.Component {
             </Route>
           </Switch>
           :
-          <div className={location.pathname.startsWith("/course/test/ask") ? "contentAsk" : "content"}>
+          <div className={
+            location.pathname.startsWith("/course/test/ask") || location.pathname.startsWith("/mine/classChat") ? 
+            "contentAsk" : 
+            "content"}
+          >
           <Auth defend={true} />
           <Switch >
             <Route path="/index">

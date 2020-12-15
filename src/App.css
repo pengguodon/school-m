@@ -82,3 +82,10 @@ img {
   border: none;
   vertical-align: middle;
 }
+
+.noSelect {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}

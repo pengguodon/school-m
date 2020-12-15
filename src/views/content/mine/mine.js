@@ -12,6 +12,7 @@ const MineIndex = loadable(()=> import('./mineIndex/mineIndex'))
 const ChangePassword = loadable(()=> import('./changePassword/changePassword'))
 const AboutMe = loadable(()=> import('./aboutMe/aboutMe'))
 const ChangeAvatar = loadable(()=> import('./changeAvatar/changeAvatar'))
+const ClassChat = loadable(()=> import('./classChat/classChat'))
 
 class Mine extends React.Component{
   render(){
@@ -28,6 +29,9 @@ class Mine extends React.Component{
         </Route>
         <Route exact path="/mine/changeAvatar">
           <ChangeAvatar/>
+        </Route>
+        <Route exact path="/mine/classChat">
+          <ClassChat/>
         </Route>
       </div>
     )

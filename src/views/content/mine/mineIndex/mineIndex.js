@@ -2,7 +2,7 @@ import React from 'react'
 
 import './mineIndex.css'
 import { List } from 'antd-mobile';
-import { ActionSheet } from 'antd-mobile';
+import { ActionSheet, Badge } from 'antd-mobile';
 import { connect } from 'react-redux'
 import { setUserINFO } from 'myredux/myRedux'
 import { removeStudentToken } from 'utils/auth'
@@ -66,12 +66,25 @@ class MineIndex extends React.Component {
   state = {
     disabled: false,
   }
+
+  classRecvmsgLength(){
+    return this.props.classRecvmsg.filter(v=> v.read === 0).length
+  }
+
   render() {
     return (
       <div className="mineIndex">
         <NavBar title="我的主页" />
-        <MineInfo/>
+        <MineInfo />
         <List className="mineIndex-nav-list">
+          <Item
+            thumb="https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/icon/mine/%E7%8F%AD%E7%BA%A7%E5%9C%88.png"
+            arrow="horizontal"
+            onClick={() => { this.pushHandle("classChat") }}
+            extra={<Badge text={this.classRecvmsgLength()} overflowCount={99} />}
+          >
+            班级聊天室
+          </Item>
           <Item
             thumb="https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/icon/mine/%E4%BF%AE%E6%94%B9.png"
             arrow="horizontal"
@@ -108,7 +121,8 @@ class MineIndex extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    userInfo: state.userInfo
+    userInfo: state.userInfo,
+    classRecvmsg: state.classRecvmsg
   }
 }
 
