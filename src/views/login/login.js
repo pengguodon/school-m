@@ -20,6 +20,9 @@ import { setUserINFO, setTourist } from 'myredux/myRedux'
 
 import Auth from 'components/auth/auth'
 
+import HighBox from 'components/highBox/highBox'
+
+
 const alert = Modal.alert;
 
 const touristIcon = <IconFont style={
@@ -30,7 +33,7 @@ const touristIcon = <IconFont style={
 
 // 显示警告弹框
 const showAlert = () => {
-  alert('警告：', '输入的内容不能未空', [
+  alert('警告', '输入的内容不能为空', [
     { text: '知道了' },
   ])
 };
@@ -112,12 +115,11 @@ class Login extends React.Component {
         <div className="login-submit myBtnWapper">
           <Button type="primary" onClick={() => { this.loginBtnHandle() }}>登录</Button>
         </div>
-        <div style={{height: "1rem"}}>
-
-        </div>
+        <HighBox/>
         <div style={{textAlign: "center"}}>
           <Button icon={touristIcon} inline  onClick={() => { this.go_to_tourist() }}>游客模式进入</Button>
         </div>
+        <HighBox/>
       </div>
     )
   }

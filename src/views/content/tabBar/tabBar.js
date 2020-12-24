@@ -52,7 +52,10 @@ class MyTabBar extends React.Component{
   render() {
     const { location, tourist } = this.props
     return (
-      (location.pathname.startsWith("/course/test/ask") ||　location.pathname.startsWith("/mine/classChat") || location.pathname.startsWith("/course/test/score") || tourist )
+      (location.pathname.startsWith("/course/test/") 
+      ||　location.pathname.startsWith("/mine/classChat") 
+      || location.pathname.startsWith("/course/test/score") 
+      || tourist )
       ? 
       null 
       :

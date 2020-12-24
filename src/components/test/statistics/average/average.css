@@ -1,0 +1,36 @@
+.average{
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+.average .tips{
+  color: #A0A0A0;
+  text-align: center;
+  font-size: .6rem;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.average .topInfo {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.average .topInfo .message{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.average .topInfo .message .ranking{
+  font-size: .8rem;
+}
+
+.average .topInfo .message .score{
+  padding-left: 10px;
+  font-size: 1.4rem;
+  font-weight: 800;
+}

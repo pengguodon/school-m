@@ -270,7 +270,7 @@ class Analyse extends React.Component {
       <div className='analyse'>
         <NavBar title="答题分析" back={true} url="/course/test/score" />
         <div className="alTitle">答题情况</div>
-        <div>
+        <div className="analyse-wrap">
           {
             this.state.scoreQuery.scAnswer.length > 0 ?
               <Accordion>

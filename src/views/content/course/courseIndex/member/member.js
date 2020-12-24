@@ -3,17 +3,21 @@ import React from 'react'
 import './member.css'
 
 import { Grid } from 'antd-mobile';
-
 import { withRouter } from 'react-router-dom'
-
 import myCourse from 'api/course/course'
-
 import { connect } from 'react-redux'
 
+import ReactPlaceholder from 'react-placeholder'
+import "react-placeholder/lib/reactPlaceholder.css"
+
+const awesomePlaceholder = (
+  <div></div>
+);
 
 class Member extends React.Component {
   state = {
     data: [],
+    ready: false
   }
 
   componentDidMount() {
@@ -39,7 +43,8 @@ class Member extends React.Component {
         text: `${_val.stName}`,
       }))
       this.setState({
-        data: [...arr]
+        data: [...arr],
+        ready: true
       });
     })
   }
@@ -52,20 +57,26 @@ class Member extends React.Component {
   render() {
     return (
       <div className='member'>
-        {
-          this.state.data.length > 0 ?
-          <div className="title mySpan">已经有{this.state.data.length}位同学加入了此课程</div>
-          :
-          <div className="title mySpan">暂无同学加入此课程</div>
-        }
-        
-        <div className="memberList" >
+
+
+        <ReactPlaceholder customPlaceholder={awesomePlaceholder} ready={this.state.ready}>
           {
             this.state.data.length > 0 ?
-              this.createData()
-              : null
+              <div className="title">"{this.state.data.length}"位同学加入了此课程</div>
+              :
+              <div className="title mySpan">暂无同学加入此课程</div>
           }
-        </div>
+          <div className="memberList" >
+            {
+              this.state.data.length > 0 ?
+                this.createData()
+                : null
+            }
+          </div>
+
+        </ReactPlaceholder>
+
+
 
       </div>
     )

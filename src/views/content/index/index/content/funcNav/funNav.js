@@ -67,11 +67,11 @@ class FuncNav extends React.Component {
               }
             </div>
           </div>
-          <div className="funcNav-content">
+          {/* <div className="funcNav-content">
             <div className="funcNav-content-list">
               更多尚在开发
             </div>
-          </div>
+          </div> */}
         </Carousel>
       </div>
     )

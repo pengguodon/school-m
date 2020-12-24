@@ -4,6 +4,7 @@ import './font/iconfont.css'
 
 // 自定义打印个人信息函数
 import myConsole from 'utils/console'
+import momentLan from 'utils/momentLan'
 
 // 路由
 import {
@@ -31,6 +32,7 @@ const store = createStore(My_redux, compose(
 
 function App() {
   myConsole()
+  momentLan()
   return (
     <div className="myApp">
       <Provider store={store}>
@@ -38,6 +40,9 @@ function App() {
           <Switch>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route path="/tc">
+              <div>教师</div>
             </Route>
             <Route path="/">
               <Content />

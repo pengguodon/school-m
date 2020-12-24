@@ -11,3 +11,8 @@
   font-size: .8rem;
   letter-spacing: .3rem;
 }
+
+.analyse .analyse-wrap{
+  height: calc(100% - 90px);
+  overflow-y: scroll;
+}

@@ -17,7 +17,15 @@ import { setCourseINFO } from 'myredux/myRedux'
 
 import loadable from 'utils/loadable'
 
+import ReactPlaceholder from 'react-placeholder'
+import "react-placeholder/lib/reactPlaceholder.css"
+
+
 const NoneCourse = loadable(()=> import('./noneCourse/noneCourse'))
+
+const awesomePlaceholder = (
+  <div></div>
+);
 
 class CourseList extends React.Component {
 
@@ -31,7 +39,8 @@ class CourseList extends React.Component {
       data: [],
       dataSource,
       refreshing: true,
-      isLoading: true
+      isLoading: true,
+      ready: false
     };
   }
 
@@ -41,7 +50,11 @@ class CourseList extends React.Component {
 
   init() {
     myCourse.getCourseList().then((res) => {
-      if(res.data.items.length === 0) return
+      if(res.data.items.length === 0) {
+        return this.setState({
+          ready: true
+        })
+      }
       this.setState({
         data: [
           res.data.items,
@@ -49,6 +62,7 @@ class CourseList extends React.Component {
         dataSource: this.state.dataSource.cloneWithRows(res.data.items),
         refreshing: false,
         isLoading: false,
+        ready: true
       })
     })
   }
@@ -107,8 +121,10 @@ class CourseList extends React.Component {
             />
             <Card.Body>
               <div>{rowData.crIntro}</div>
+              <p>所属班级：{rowData.crClass}</p>
+              <p>所属学期：{rowData.crSemester}</p>
             </Card.Body>
-            <Card.Footer content={"老师：" + rowData.tcName} extra={<div>{rowData.crSemester}</div>} />
+            <Card.Footer content={`课程号：${rowData.crId}`} extra={"老师：" + rowData.tcName} />
           </Card>
         </div>
       );
@@ -116,35 +132,37 @@ class CourseList extends React.Component {
     return (
       <div className='courseList'>
         <NavBar title="课程列表"  rightContent={RightContent} />
-        {
-          !(this.state.data.length > 0 )?
-            <NoneCourse/>
-            :
-            <ListView
-              renderHeader={() => <span>加入的课程列表</span>}
-              key={'1'}
-              ref={el => this.lv = el}
-              dataSource={this.state.dataSource}
+        <ReactPlaceholder customPlaceholder={awesomePlaceholder} ready={this.state.ready}>
+          {
+            (this.state.data.length <= 0 )?
+              <NoneCourse/>
+              :
+              <ListView
+                renderHeader={() => <span>已加入的课程列表</span>}
+                key={'1'}
+                ref={el => this.lv = el}
+                dataSource={this.state.dataSource}
 
-              renderRow={row}
-              renderSeparator={separator}
-              style={{
-                height: "100%",
-                overflow: "auto"
-              }}
+                renderRow={row}
+                renderSeparator={separator}
+                style={{
+                  height: "calc(100% - 50px)",
+                  overflow: "auto"
+                }}
 
-              // 下拉刷新
-              pullToRefresh={<PullToRefresh
-                refreshing={this.state.refreshing}
-                onRefresh={this.onRefresh}
-              />}
+                // 下拉刷新
+                pullToRefresh={<PullToRefresh
+                  refreshing={this.state.refreshing}
+                  onRefresh={this.onRefresh}
+                />}
 
-              // 当所有的数据都已经渲染过，并且列表被滚动到距离最底部不足onEndReachedThreshold个像素的距离时调用
-              // onEndReachedThreshold：调用onEndReached之前的临界值，单位是像素
-              onEndReached={this.onEndReached}
-              pageSize={5}
-            />
-        }
+                // 当所有的数据都已经渲染过，并且列表被滚动到距离最底部不足onEndReachedThreshold个像素的距离时调用
+                // onEndReachedThreshold：调用onEndReached之前的临界值，单位是像素
+                onEndReached={this.onEndReached}
+                pageSize={5}
+              />
+          }
+        </ReactPlaceholder>
 
       </div >
     )

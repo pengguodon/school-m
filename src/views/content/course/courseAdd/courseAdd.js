@@ -12,6 +12,8 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import NavBar from 'components/navBar/navBar'
+import HighBox from 'components/highBox/highBox'
+
 
 const alert = Modal.alert;
 
@@ -88,6 +90,8 @@ class CourseAdd extends React.Component {
               <div className="myBtnWapper">
                 <Button type="primary" onClick={() => { this.bingCourseHandle() }}>加入此班课程</Button>
               </div>
+              <HighBox/>
+              
             </div>
             :
             <Result

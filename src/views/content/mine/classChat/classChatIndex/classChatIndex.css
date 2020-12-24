@@ -1,0 +1,195 @@
+.ClassChatIndex{
+  height: 100%;
+  position: relative
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap{
+  position: absolute;
+  bottom: 0;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap{
+  border-top: 1px solid #E0E0E0;
+  background-color: #F7F7F7;
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.ClassChatIndex  .ClassChatIndex-content{
+  height: calc(100% - 100px);
+  /* overflow-y: scroll; */
+}
+
+.ClassChatIndex  .ClassChatIndex-content #ClassChatIndex-content-id{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* --------------------左边消息框 */
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-left{
+  padding: 10px;
+}
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-left .ClassChatIndex-content-left-content{
+  position: relative;
+  width: 100%;
+}
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-left .ClassChatIndex-content-left-content .ClassChatIndex-content-left-content-av{
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #FFE070;
+  border-radius: 50%;
+
+}
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-left .ClassChatIndex-content-left-content .ClassChatIndex-content-left-content-name{
+  margin-left: 55px;
+  font-size: .6rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-left .ClassChatIndex-content-left-content .ClassChatIndex-content-left-content-desc{
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: .8rem;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+/* --------------------左边消息框 */
+
+
+/* --------------------右边消息框 */
+
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-right{
+  padding: 10px;
+}
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-right .ClassChatIndex-content-right-content{
+  position: relative;
+  width: 100%;
+}
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-right .ClassChatIndex-content-right-content .ClassChatIndex-content-right-content-av{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #FFE070;
+  border-radius: 50%;
+}
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-right .ClassChatIndex-content-right-content .ClassChatIndex-content-right-content-name{
+  margin-right: 55px;
+  font-size: .6rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: right;
+  font-weight: 800;
+}
+
+.ClassChatIndex  .ClassChatIndex-content .ClassChatIndex-content-right .ClassChatIndex-content-right-content .ClassChatIndex-content-right-content-desc{
+  float: right;
+  /* display: inline-block; */
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  background-color: #95EC69;
+  color: #0F170A;
+  padding: 10px;
+  font-size: .8rem;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+/* --------------------右边消息框 */
+
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-input{
+  flex: 1;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-input > div{
+  width: 90%;
+  height: 40px;
+  margin: 5px auto;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-input > div .am-list-item{
+  min-height: 40px;
+  height: 40px;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-right{
+  width: 110px;
+  height: 50px;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-right > span{
+  float: left;
+  height:50px;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-right .ClassChatIndex-input-wrap-right-face{
+  width: 40px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-right .ClassChatIndex-input-wrap-right-btn{
+  text-align: center;
+  width: 60px;
+}
+
+.ClassChatIndex .ClassChatIndex-input-wrap .ClassChatIndex-input-wrap-right .ClassChatIndex-input-wrap-right-btn .ClassChatIndex-input-wrap-right-btn-send{
+  margin-top: 5px;
+  display: inline-block;
+  height: 40px;
+  width: 60px;
+  background-color: #06C05F;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  -webkit-user-select:none;
+
+   -moz-user-select:none;
+
+   -ms-user-select:none;
+
+   user-select:none;
+}
+
+/* ---------表情-------------- */
+.ClassChatIndex .emoji-wrap{
+  width: 100%;
+  height: 154;
+  position: absolute;
+  bottom: 50px;
+}
+
+.ClassChatIndex .emoji-wrap .am-grid-icon,.ClassChatIndex .emoji-wrap  .am-grid-text{
+  margin-top: 0 !important;
+  font-size: 1rem !important;
+}
+/* ---------表情-------------- */

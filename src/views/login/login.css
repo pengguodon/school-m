@@ -1,5 +1,6 @@
 .login{
   height: 100%;
+  overflow-y: scroll;
   width: 100%;
   background-color: #fff;
 }

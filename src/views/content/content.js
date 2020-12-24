@@ -33,7 +33,8 @@ class Content extends React.Component {
           </Switch>
           :
           <div className={
-            location.pathname.startsWith("/course/test/ask") || location.pathname.startsWith("/mine/classChat") ? 
+            location.pathname.startsWith("/course/test/") 
+            || location.pathname.startsWith("/mine/classChat") ? 
             "contentAsk" : 
             "content"}
           >

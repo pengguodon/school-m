@@ -1,0 +1,53 @@
+.analyse{
+  height: 100%;
+  width: 100%;
+}
+
+.analyse .title{
+  display: flex;
+  height: 50px;
+  background-color: #fff;
+}
+
+.analyse .title > div:first-child{
+  border-right: 1px solid #E4E4E4;
+}
+
+.analyse .title > div:last-child{
+  border-left: 1px solid #E4E4E4;
+}
+
+.analyse .title > div{
+  color: #373737;
+  font-size: .9rem;
+  border-top: 1px solid #E4E4E4;
+  border-bottom: 1px solid #E4E4E4;
+  line-height: 50px;
+  text-align: center;
+  flex: 1;
+}
+
+.analyse .swiper-container{
+  height: calc(100% - 50px) ;
+  width: 100%;
+}
+
+.analyse .swiper-container .swiper-slide{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.analyse .swiper-container .swiper-slide .pre-card-wrap{
+  height: 60%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.analyse .swiper-container .swiper-slide  .swiper-wrapper-asCard-title{
+  font-size: .8rem;
+  height: 40px;
+  line-height: 40px;
+  text-indent: .7rem;
+  color: #888888;
+}

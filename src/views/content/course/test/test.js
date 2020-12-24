@@ -14,6 +14,7 @@ import { connect } from 'react-redux'
 const ScoreList = loadable(()=> import('./scoreList/scoreList'))
 const Ask = loadable(()=> import('./ask/ask'))
 const Analyse = loadable(()=> import('./analyse/analyse'))
+const Statistics = loadable(()=> import('components/test/statistics/statistics'))
 
 class Test extends React.Component {
   componentWillMount(){
@@ -37,6 +38,9 @@ class Test extends React.Component {
         </Route>
         <Route path="/course/test/analyse">
           <Analyse/>
+        </Route>
+        <Route path="/course/test/statistics">
+          <Statistics/>
         </Route>
       </div>
     )

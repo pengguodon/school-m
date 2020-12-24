@@ -1,0 +1,99 @@
+.msgChat{
+  height: calc(100% - 90px);
+}
+
+.msgChat .msgChat-wrapper{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --------------------左边消息框 */
+
+.msgChat  .msgChat-content .msgChat-content-left{
+  padding: 10px;
+}
+.msgChat  .msgChat-content .msgChat-content-left .msgChat-content-left-content{
+  position: relative;
+  width: 100%;
+}
+
+.msgChat  .msgChat-content .msgChat-content-left .msgChat-content-left-content .msgChat-content-left-content-av{
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #FFE070;
+  border-radius: 50%;
+
+}
+
+.msgChat  .msgChat-content .msgChat-content-left .msgChat-content-left-content .msgChat-content-left-content-name{
+  margin-left: 55px;
+  font-size: .6rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.msgChat  .msgChat-content .msgChat-content-left .msgChat-content-left-content .msgChat-content-left-content-desc{
+  display: inline-block;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: .8rem;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+/* --------------------左边消息框 */
+
+
+/* --------------------右边消息框 */
+
+
+.msgChat  .msgChat-content .msgChat-content-right{
+  padding: 10px;
+}
+.msgChat  .msgChat-content .msgChat-content-right .msgChat-content-right-content{
+  position: relative;
+  width: 100%;
+}
+
+.msgChat  .msgChat-content .msgChat-content-right .msgChat-content-right-content .msgChat-content-right-content-av{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #FFE070;
+  border-radius: 50%;
+}
+
+.msgChat  .msgChat-content .msgChat-content-right .msgChat-content-right-content .msgChat-content-right-content-name{
+  margin-right: 55px;
+  font-size: .6rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: right;
+  font-weight: 800;
+}
+
+.msgChat  .msgChat-content .msgChat-content-right .msgChat-content-right-content .msgChat-content-right-content-desc{
+  float: right;
+  /* display: inline-block; */
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  background-color: #95EC69;
+  color: #0F170A;
+  padding: 10px;
+  font-size: .8rem;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+/* --------------------右边消息框 */

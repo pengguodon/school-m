@@ -3,6 +3,7 @@
 }
 
 .courseIndex .courseIndexWrap{
-  padding-top: 50px;
-  height: calc(100% - 95px);
+  padding-top: 60px;
+  height: calc(100% - 105px);
+  overflow-y: scroll;
 }

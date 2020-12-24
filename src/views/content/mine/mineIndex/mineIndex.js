@@ -78,7 +78,7 @@ class MineIndex extends React.Component {
         <MineInfo />
         <List className="mineIndex-nav-list">
           <Item
-            thumb="https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/icon/mine/%E7%8F%AD%E7%BA%A7%E5%9C%88.png"
+            thumb="https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/icon/mine/%E8%81%8A%E5%A4%A9.png"
             arrow="horizontal"
             onClick={() => { this.pushHandle("classChat") }}
             extra={<Badge text={this.classRecvmsgLength()} overflowCount={99} />}
@@ -86,7 +86,7 @@ class MineIndex extends React.Component {
             班级聊天室
           </Item>
           <Item
-            thumb="https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/icon/mine/%E4%BF%AE%E6%94%B9.png"
+            thumb="https://pengguodon-guli-file.oss-cn-guangzhou.aliyuncs.com/schoolMobile/icon/mine/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png"
             arrow="horizontal"
             onClick={() => { this.pushHandle("ChangeAvatar") }}
           >

@@ -2,7 +2,6 @@ import React from 'react'
 
 import { ActionSheet } from 'antd-mobile';
 
-import IconFont from 'utils/iconfont'
 
 import { withRouter } from 'react-router-dom'
 
@@ -39,12 +38,7 @@ class RightContent extends React.Component {
 
   render() {
     return (
-      <IconFont onClick={() => { this.showActionSheet() }} style={
-        {
-          fontSize: 20,
-          marginTop: 4
-        }
-      } type="icon-CombinedShapex" />
+      <span onClick={() => { this.showActionSheet() }}>添加课程</span>
     )
   }
 }

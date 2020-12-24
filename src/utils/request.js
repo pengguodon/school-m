@@ -40,6 +40,7 @@ service.interceptors.response.use(
     }
   },
   err => {
+    Toast.fail("请求超时，请稍后再试", 3);
     // console.log('错误:' + err)
     return Promise.reject(err)
   }

@@ -6,7 +6,7 @@ import topic from 'api/topic/topic'
 import score from 'api/score/score'
 
 
-import { Pagination, Card, Badge, Radio, WhiteSpace, Checkbox, List } from 'antd-mobile';
+import { Progress, Button, Pagination, Card, Badge, Radio, WhiteSpace, Checkbox, List } from 'antd-mobile';
 
 import { Modal } from 'antd-mobile';
 
@@ -15,6 +15,7 @@ import { withRouter } from 'react-router-dom'
 import MyTime from 'utils/time'
 import ScoreSort from 'utils/scoreSort'
 import { connect } from 'react-redux'
+import NavBar from 'components/navBar/navBar'
 
 const locale = {
   prevText: '上一题',
@@ -37,7 +38,9 @@ class Asking extends React.Component {
     countDownStr: "",
     oldX: 0,
     flag: false,
-    distance: 70
+    distance: 55,
+    totalTime: "",
+    percent: 100
   }
 
   componentDidMount() {
@@ -46,7 +49,6 @@ class Asking extends React.Component {
 
   init() {
     this.getTopicListData(this.props.testInfo.qbId)
-    
   }
 
   componentWillUnmount() {
@@ -70,7 +72,8 @@ class Asking extends React.Component {
   start() {
     this.setState({
       start: true,
-      countDownNum: this.props.testInfo.tsTime * 60
+      countDownNum: this.props.testInfo.tsTime * 60,
+      totalTime: this.props.testInfo.tsTime * 60,
     })
     this.setState({
       countDownStr: MyTime(this.props.testInfo.tsTime * 60),
@@ -94,13 +97,15 @@ class Asking extends React.Component {
   // 倒计时函数
   countDown() {
     this.countDownInterval = setInterval(() => {
+
       if (this.state.countDownNum <= 0) {
         this.timeOut()
         clearInterval(this.countDownInterval)
       }
       this.setState({
         countDownStr: MyTime(this.state.countDownNum),
-        countDownNum: this.state.countDownNum - 1
+        countDownNum: this.state.countDownNum - 1,
+        percent: (this.state.countDownNum / this.state.totalTime) * 100
       })
     }, 1000);
   }
@@ -109,7 +114,7 @@ class Asking extends React.Component {
   showAlert(time) {
     alert('提示', `请注意！作答时间为${time}分钟！`, [
       {
-        text: '开始答题', onPress: () => {this.start()}
+        text: '开始答题', onPress: () => { this.start() }
       },
     ]);
   }
@@ -157,7 +162,7 @@ class Asking extends React.Component {
           <div key={v.tpId}>
             <Card>
               <Card.Header
-                title={<Badge text="单选题" hot style={{ fontSize: "0.7rem" }} />}
+                title={<Badge text="单选题" hot style={{ padding: '3px 3px', borderRadius: 2, fontSize: "0.7rem", backgroundColor: '#f19736' }} />}
                 extra={<span>分值：{v.tpScore}分</span>}
               />
               <Card.Body>
@@ -167,19 +172,20 @@ class Asking extends React.Component {
                 </div>
                 <p className="myTips">选择：</p>
                 <div className="answer" >
-
-                  <RadioItem checked={this.state.answerList[i] === "A"} onClick={() => this.changeAnswer(i, "A")}>
-                    A：{v.tpOptionA ? v.tpOptionA : "无"}
-                  </RadioItem>
-                  <RadioItem checked={this.state.answerList[i] === "B"} onClick={() => this.changeAnswer(i, "B")}>
-                    B：{v.tpOptionB ? v.tpOptionB : "无"}
-                  </RadioItem>
-                  <RadioItem checked={this.state.answerList[i] === "C"} onClick={() => this.changeAnswer(i, "C")}>
-                    C：{v.tpOptionC ? v.tpOptionC : "无"}
-                  </RadioItem>
-                  <RadioItem checked={this.state.answerList[i] === "D"} onClick={() => this.changeAnswer(i, "D")}>
-                    D：{v.tpOptionD ? v.tpOptionD : "无"}
-                  </RadioItem>
+                  <List renderHeader={() => '单选题哟~'}>
+                    <RadioItem checked={this.state.answerList[i] === "A"} onClick={() => this.changeAnswer(i, "A")}>
+                      A：{v.tpOptionA ? v.tpOptionA : "无"}
+                    </RadioItem>
+                    <RadioItem checked={this.state.answerList[i] === "B"} onClick={() => this.changeAnswer(i, "B")}>
+                      B：{v.tpOptionB ? v.tpOptionB : "无"}
+                    </RadioItem>
+                    <RadioItem checked={this.state.answerList[i] === "C"} onClick={() => this.changeAnswer(i, "C")}>
+                      C：{v.tpOptionC ? v.tpOptionC : "无"}
+                    </RadioItem>
+                    <RadioItem checked={this.state.answerList[i] === "D"} onClick={() => this.changeAnswer(i, "D")}>
+                      D：{v.tpOptionD ? v.tpOptionD : "无"}
+                    </RadioItem>
+                  </List>
                 </div>
                 <WhiteSpace size="xl" />
               </Card.Body>
@@ -193,7 +199,7 @@ class Asking extends React.Component {
           <div key={v.tpId}>
             <Card>
               <Card.Header
-                title={<Badge text="多选题" hot style={{ fontSize: "0.7rem" }} />}
+                title={<Badge text="多选题" hot style={{ padding: '3px 3px', borderRadius: 2, fontSize: "0.7rem", backgroundColor: '#3F48CC' }} />}
                 extra={<span>分值：{v.tpScore}分</span>}
               />
               <Card.Body>
@@ -233,7 +239,7 @@ class Asking extends React.Component {
           <div key={v.tpId}>
             <Card>
               <Card.Header
-                title={<Badge text="判断题" hot style={{ fontSize: "0.7rem" }} />}
+                title={<Badge text="判断题" hot style={{ padding: '3px 3px', borderRadius: 2, fontSize: "0.7rem" }} />}
                 extra={<span>分值：{v.tpScore}分</span>}
               />
               <Card.Body>
@@ -243,13 +249,14 @@ class Asking extends React.Component {
                 </div>
                 <p className="myTips">选择：</p>
                 <div className="answer" >
-
-                  <RadioItem checked={this.state.answerList[i] === "A"} onClick={() => this.changeAnswer(i, "A")}>
-                    正确
+                  <List renderHeader={() => '判断题哟~'}>
+                    <RadioItem checked={this.state.answerList[i] === "A"} onClick={() => this.changeAnswer(i, "A")}>
+                      正确
                   </RadioItem>
-                  <RadioItem checked={this.state.answerList[i] === "B"} onClick={() => this.changeAnswer(i, "B")}>
-                    错误
+                    <RadioItem checked={this.state.answerList[i] === "B"} onClick={() => this.changeAnswer(i, "B")}>
+                      错误
                   </RadioItem>
+                  </List>
                 </div>
                 <WhiteSpace size="xl" />
               </Card.Body>
@@ -347,53 +354,54 @@ class Asking extends React.Component {
     })
   }
 
-  cardTouchStart(e){
+  cardTouchStart(e) {
     this.setState({
       flag: true,
       oldX: e.changedTouches[0].pageX
     })
   }
 
-  cardTouchMove(e){
-    if(this.state.flag){
+  cardTouchMove(e) {
+    if (this.state.flag) {
       if (e.changedTouches[0].pageX > this.state.oldX && e.changedTouches[0].pageX - this.state.oldX > this.state.distance) {
-        if(this.state.page === this.state.dataList.length){
+        if (this.state.page === 1) {
           return this.setState({
-            flag : false,
-            page : 1,
-            oldX : 0
+            flag: false,
+            page: this.state.dataList.length,
+            oldX: 0
           })
         }
         return this.setState({
-          flag : false,
-          page : this.state.page+1,
-          oldX : 0
+          flag: false,
+          oldX: 0,
+          page: this.state.page - 1
         })
       }
 
       if (e.changedTouches[0].pageX < this.state.oldX && this.state.oldX - e.changedTouches[0].pageX > this.state.distance) {
-        if(this.state.page === 1){
+        if (this.state.page === this.state.dataList.length) {
           return this.setState({
-            flag : false,
-            page : this.state.dataList.length,
-            oldX : 0
+            flag: false,
+            page: 1,
+            oldX: 0
           })
         }
         return this.setState({
-          flag : false,
-          oldX : 0,
-          page: this.state.page - 1
+          flag: false,
+          page: this.state.page + 1,
+          oldX: 0
         })
       }
     }
   }
 
-  cardTouchEnd(){
+  cardTouchEnd() {
     this.setState({
       flag: false,
-      oldX : 0
+      oldX: 0
     })
   }
+
 
 
   render() {
@@ -401,22 +409,27 @@ class Asking extends React.Component {
       <div className='asking'>
 
         {
-          !this.state.start ? null : <div>
-            <div className="title">
-              <div className="time">剩余答题时间：{this.state.countDownStr}</div>
-              <div className="subBtn mySpan" onClick={() => { this.subClickHandle() }}>交卷</div>
-            </div>
-            <div className="askinGcontent" ref="askinGcontent" >
-              <div className="askin_w" ref="askin_w" onTouchStart={(e)=>{this.cardTouchStart(e)}} onTouchMove={(e)=>{this.cardTouchMove(e)}} onTouchEnd={(e)=>{this.cardTouchEnd(e)}}>
-                {
-                  this.createTopic()[this.state.page - 1]
-                }
+          !this.state.start ?
+            null :
+            <div>
+              <NavBar title={"剩余答题时间：" + this.state.countDownStr} />
+              <div className="progress" ><Progress position="normal" percent={this.state.percent} /></div>
+              <div className="pageHandle">
+                <div className="pageHandle-content">
+                  <Pagination style={{ marginTop: "3px" }} total={this.state.dataList.length} onChange={(e) => { this.paginationChange(e) }} current={this.state.page} locale={locale} />
+                </div>
+              </div>
+              <div className="askinGcontent" ref="askinGcontent" onTouchStart={(e) => { this.cardTouchStart(e) }} onTouchMove={(e) => { this.cardTouchMove(e) }} onTouchEnd={(e) => { this.cardTouchEnd(e) }} >
+                <div className="askin_w" ref="askin_w" >
+                  {
+                    this.createTopic()[this.state.page - 1]
+                  }
+                </div>
+              </div>
+              <div className="subBtn">
+                <div><Button size="large" onClick={() => { this.subClickHandle() }}>交卷</Button></div>
               </div>
             </div>
-            <div className="pageHandle">
-              <Pagination style={{ marginTop: "3px" }} total={this.state.dataList.length} onChange={(e) => { this.paginationChange(e) }} current={this.state.page} locale={locale} />
-            </div>
-          </div>
         }
       </div>
     )
@@ -429,4 +442,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default withRouter(connect(mapStateToProps,null)(Asking))
+export default withRouter(connect(mapStateToProps, null)(Asking))

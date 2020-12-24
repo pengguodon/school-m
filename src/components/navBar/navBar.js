@@ -36,7 +36,8 @@ class MyNavBar extends React.Component {
           mode="light"
           icon={this.props.back ? <Icon type="left" size="lg"  /> : null}
           onLeftClick={() => this.go_back()}
-          rightContent={RightContent ? <RightContent/> : null}
+          rightContent={RightContent ? <RightContent /> : null}
+          leftContent={this.props.back ? <span style={{marginLeft: "-10px"}}>返回</span> : null}
         >{this.props.title}</NavBar>
       </div>
     )

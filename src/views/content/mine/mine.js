@@ -30,7 +30,7 @@ class Mine extends React.Component{
         <Route exact path="/mine/changeAvatar">
           <ChangeAvatar/>
         </Route>
-        <Route exact path="/mine/classChat">
+        <Route path="/mine/classChat">
           <ClassChat/>
         </Route>
       </div>

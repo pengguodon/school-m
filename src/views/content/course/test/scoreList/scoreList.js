@@ -17,6 +17,14 @@ import MyTime from 'utils/time'
 
 import NavBar from 'components/navBar/navBar'
 
+import ReactPlaceholder from 'react-placeholder'
+import "react-placeholder/lib/reactPlaceholder.css"
+import RightContent from './rightContent/rightContent'
+
+const awesomePlaceholder = (
+  <div></div>
+);
+
 class ScoreList extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +42,8 @@ class ScoreList extends React.Component {
         scTime: "无",
         no: "无"
       },
-      totalScore: 0
+      totalScore: 0,
+      ready: false
     };
   }
 
@@ -68,7 +77,8 @@ class ScoreList extends React.Component {
         count += res.data.items[sc].tpScore
       }
       this.setState({
-        totalScore: count
+        totalScore: count,
+        ready: true
       })
     })
   }
@@ -152,8 +162,9 @@ class ScoreList extends React.Component {
       );
     };
     return (
-        <div className='scoreList'>
-          <NavBar title="成绩页面" back={true} url="/course/index/activity"/>
+      <div className='scoreList'>
+        <NavBar title="成绩页面" back={true} url="/course/index/activity" rightContent={RightContent} />
+        <ReactPlaceholder customPlaceholder={awesomePlaceholder} ready={this.state.ready}>
           <div className="topInfo">
             <div className="content_top"><div className="top_center">"{this.props.testInfo.tsName}"</div></div>
             <div className="message">
@@ -168,15 +179,19 @@ class ScoreList extends React.Component {
             }
 
           </div>
+          <div className="title clearfix">
+            <span>排名</span><span>个人信息</span><span>得分</span><span>用时</span>
+          </div>
           <div className="list">
             <ListView
-              renderHeader={() => {
-                return (
-                  <div className="ranking">
-                    <span>排名</span><span>个人信息</span><span>得分</span><span>用时</span>
-                  </div>
-                )
-              }}
+            //   renderHeader={() => {
+            //     return (
+            //       <div className="ranking">
+            //         <span>排名</span><span>个人信息</span><span>得分</span><span>用时</span>
+            //       </div>
+            //     )
+            //   }
+            // }
 
               key={'1'}
               ref={el => this.lv = el}
@@ -199,7 +214,8 @@ class ScoreList extends React.Component {
               pageSize={5}
             />
           </div>
-        </div >
+        </ReactPlaceholder>
+      </div >
     )
   }
 }

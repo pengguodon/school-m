@@ -3,3 +3,11 @@
   width: 100%;
   z-index: 9999;
 }
+
+.coureTabBar .am-tab-bar-bar{
+  height: 60px;
+}
+
+.coureTabBar .am-tab-bar-tab-title{
+  font-size: 15px;
+}
